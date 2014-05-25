@@ -21,6 +21,7 @@
 		B51980331908352A00F3DF16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51980151908352A00F3DF16 /* UIKit.framework */; };
 		B519803B1908352A00F3DF16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B51980391908352A00F3DF16 /* InfoPlist.strings */; };
 		B519803D1908352A00F3DF16 /* SongBlurbTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B519803C1908352A00F3DF16 /* SongBlurbTests.m */; };
+		B5198047190835CC00F3DF16 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5198046190835CC00F3DF16 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B51980381908352A00F3DF16 /* SongBlurbTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SongBlurbTests-Info.plist"; sourceTree = "<group>"; };
 		B519803A1908352A00F3DF16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B519803C1908352A00F3DF16 /* SongBlurbTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongBlurbTests.m; sourceTree = "<group>"; };
+		B5198046190835CC00F3DF16 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5198047190835CC00F3DF16 /* AVFoundation.framework in Frameworks */,
 				B51980141908352A00F3DF16 /* CoreGraphics.framework in Frameworks */,
 				B51980161908352A00F3DF16 /* UIKit.framework in Frameworks */,
 				B51980121908352A00F3DF16 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		B51980101908352A00F3DF16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5198046190835CC00F3DF16 /* AVFoundation.framework */,
 				B51980111908352A00F3DF16 /* Foundation.framework */,
 				B51980131908352A00F3DF16 /* CoreGraphics.framework */,
 				B51980151908352A00F3DF16 /* UIKit.framework */,

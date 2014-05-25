@@ -17,7 +17,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Setup audio session
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    
+    // Define the recorder setting
+    NSMutableDictionary *recordSettings = [[NSMutableDictionary alloc] init];
+    
+    [recordSettings setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+    [recordSettings setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSettings setValue:[NSNumber numberWithInt:2] forKey:AVNumberOfChannelsKey];
+    
+    // Initiate and prepare the recorder
+//    self.recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSettings error:NULL];/
+//    self.recorder = [[AVAudioRecorder alloc] init];
+    self.recorder.delegate = self;
+    self.recorder.meteringEnabled = YES;
+    [self.recorder prepareToRecord];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +43,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)recordTapped:(id)sender {
+    
+}
 @end
