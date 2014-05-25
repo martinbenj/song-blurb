@@ -464,6 +464,7 @@
 				B51980421908352A00F3DF16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B51980431908352A00F3DF16 /* Build configuration list for PBXNativeTarget "SongBlurbTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +473,7 @@
 				B51980451908352A00F3DF16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
