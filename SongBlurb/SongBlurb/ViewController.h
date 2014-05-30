@@ -25,6 +25,5 @@
 
 @property (strong, nonatomic) EZMicrophone *microphone;
 @property (strong, nonatomic) EZRecorder *EZRecorder;
-@property (strong, nonatomic) IBOutlet EZAudioPlot *audioPlot;
 
 @end

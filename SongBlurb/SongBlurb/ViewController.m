@@ -23,16 +23,16 @@
     self.microphone = [EZMicrophone microphoneWithDelegate:self];
     self.EZRecorder = [EZRecorder recorderWithDestinationURL:[NSURL fileURLWithPathComponents:ezPath] andSourceFormat:self.microphone.audioStreamBasicDescription];
     
-    self.audioPlot.backgroundColor = [UIColor whiteColor];
-    self.audioPlot.color = [UIColor blackColor];
-    // Plot type
-    self.audioPlot.plotType     = EZPlotTypeRolling;
-    // Fill
-    self.audioPlot.shouldFill   = YES;
-    // Mirror
-    self.audioPlot.shouldMirror = YES;
-    
-    [self.microphone startFetchingAudio];
+//    self.audioPlot.backgroundColor = [UIColor whiteColor];
+//    self.audioPlot.color = [UIColor blackColor];
+//    // Plot type
+//    self.audioPlot.plotType     = EZPlotTypeRolling;
+//    // Fill
+//    self.audioPlot.shouldFill   = YES;
+//    // Mirror
+//    self.audioPlot.shouldMirror = YES;
+//    
+//    [self.microphone startFetchingAudio];
     
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -117,7 +117,7 @@
    withBufferSize:(UInt32)bufferSize
 withNumberOfChannels:(UInt32)numberOfChannels {
 	dispatch_async(dispatch_get_main_queue(),^{
-        [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
+//        [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
 	});
 }
 

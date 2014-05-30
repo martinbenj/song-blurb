@@ -46,7 +46,7 @@
                                     <action selector="playTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PSS-aF-mjM"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-WG-J7P" customClass="EZAudioPlot">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUY-WG-J7P" customClass="SBAudioVisualizer">
                                 <rect key="frame" x="41" y="351" width="238" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -55,7 +55,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="audioPlot" destination="vUY-WG-J7P" id="Zim-bF-59T"/>
                         <outlet property="playButton" destination="wLz-DE-HU2" id="Aiz-Q8-csl"/>
                         <outlet property="recordButton" destination="HAT-nA-p2u" id="WqS-sA-TLL"/>
                         <outlet property="recordPauseButton" destination="HAT-nA-p2u" id="ajj-gH-ND2"/>
