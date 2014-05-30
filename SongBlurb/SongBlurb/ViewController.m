@@ -18,6 +18,22 @@
 {
     [super viewDidLoad];
     
+    NSArray *ezPath = [NSArray arrayWithObjects:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject], @"sample.caf", nil];
+    
+    self.microphone = [EZMicrophone microphoneWithDelegate:self];
+    self.EZRecorder = [EZRecorder recorderWithDestinationURL:[NSURL fileURLWithPathComponents:ezPath] andSourceFormat:self.microphone.audioStreamBasicDescription];
+    
+    self.audioPlot.backgroundColor = [UIColor whiteColor];
+    self.audioPlot.color = [UIColor blackColor];
+    // Plot type
+    self.audioPlot.plotType     = EZPlotTypeRolling;
+    // Fill
+    self.audioPlot.shouldFill   = YES;
+    // Mirror
+    self.audioPlot.shouldMirror = YES;
+    
+    [self.microphone startFetchingAudio];
+    
     // Setup audio session
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
@@ -78,7 +94,6 @@
     [audioSession setActive:NO error:nil];
 }
 
-
 - (IBAction)playTapped:(id)sender {
     [self.recordPauseButton setEnabled:NO];
     
@@ -93,6 +108,25 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done" message:@"Recording finished"delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [self.recordPauseButton setEnabled:YES];
     [alert show];
+}
+
+#pragma mark - EZAudioMicrophoneDelegate
+
+- (void)microphone:(EZMicrophone *)microphone
+ hasAudioReceived:(float **)buffer
+   withBufferSize:(UInt32)bufferSize
+withNumberOfChannels:(UInt32)numberOfChannels {
+	dispatch_async(dispatch_get_main_queue(),^{
+        [self.audioPlot updateBuffer:buffer[0] withBufferSize:bufferSize];
+	});
+}
+
+- (void)microphone:(EZMicrophone *)microphone
+       hasBufferList:(AudioBufferList *)bufferList
+      withBufferSize:(UInt32)bufferSize
+withNumberOfChannels:(UInt32)numberOfChannels {
+    [self.EZRecorder appendDataFromBufferList:bufferList
+                                 withBufferSize:bufferSize];
 }
 
 

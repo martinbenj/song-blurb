@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController <AVAudioPlayerDelegate, AVAudioRecorderDelegate>
+#import "EZAudio.h"
+
+@interface ViewController : UIViewController <AVAudioPlayerDelegate, AVAudioRecorderDelegate, EZMicrophoneDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *recordButton;
 - (IBAction)recordTapped:(id)sender;
@@ -20,5 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *recordPauseButton;
 @property (strong, nonatomic) IBOutlet UIButton *stopButton;
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
+
+@property (strong, nonatomic) EZMicrophone *microphone;
+@property (strong, nonatomic) EZRecorder *EZRecorder;
+@property (strong, nonatomic) IBOutlet EZAudioPlot *audioPlot;
 
 @end

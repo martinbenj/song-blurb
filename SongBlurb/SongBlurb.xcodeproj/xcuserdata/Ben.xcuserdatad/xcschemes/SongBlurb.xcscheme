@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B519800D1908352A00F3DF16"
                BuildableName = "SongBlurb.app"
                BlueprintName = "SongBlurb"
-               ReferencedContainer = "container:SongBlurb.xcodeproj">
+               ReferencedContainer = "container:Songblurb.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "B519802E1908352A00F3DF16"
                BuildableName = "SongBlurbTests.xctest"
                BlueprintName = "SongBlurbTests"
-               ReferencedContainer = "container:SongBlurb.xcodeproj">
+               ReferencedContainer = "container:Songblurb.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "B519800D1908352A00F3DF16"
             BuildableName = "SongBlurb.app"
             BlueprintName = "SongBlurb"
-            ReferencedContainer = "container:SongBlurb.xcodeproj">
+            ReferencedContainer = "container:Songblurb.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "B519800D1908352A00F3DF16"
             BuildableName = "SongBlurb.app"
             BlueprintName = "SongBlurb"
-            ReferencedContainer = "container:SongBlurb.xcodeproj">
+            ReferencedContainer = "container:Songblurb.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -94,7 +94,7 @@
             BlueprintIdentifier = "B519800D1908352A00F3DF16"
             BuildableName = "SongBlurb.app"
             BlueprintName = "SongBlurb"
-            ReferencedContainer = "container:SongBlurb.xcodeproj">
+            ReferencedContainer = "container:Songblurb.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
